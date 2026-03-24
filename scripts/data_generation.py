@@ -7,7 +7,8 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Create 10 million rows
-df = spark.range(0, 10000000)
+# df = spark.range(0, 10000000)
+df = spark.range(0, 1000000)  # 1 million first
 
 # Add realistic columns
 df = df.withColumn("amount", (rand() * 1000)) \
