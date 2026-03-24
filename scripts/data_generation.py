@@ -28,7 +28,7 @@ print("BEFORE WRITE")
 # Write to absolute path (IMPORTANT)
 output_path = "D:/PREM/aws-spark-data-pipeline-main/aws-spark-data-pipeline-main/data/raw/"
 
-df.write.mode("overwrite").parquet(output_path)
+df.write.mode("overwrite").csv(output_path)
 
 print("AFTER WRITE")
 
