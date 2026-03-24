@@ -19,6 +19,6 @@ df = df.withColumn("amount", (rand() * 1000)) \
 df.show(5)
 
 # Save as Parquet (important)
-df.write.mode("overwrite").parquet("data/raw/")
+df.write.mode("overwrite").parquet("D:/PREM/aws-spark-data-pipeline-main/aws-spark-data-pipeline-main/data/raw/")
 
 print(" Data generation completed")
