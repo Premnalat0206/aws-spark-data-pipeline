@@ -16,10 +16,9 @@ df = df.withColumn("amount", (rand() * 1000)) \
        .withColumn("user_id", (rand() * 100000).cast("int")) \
        .withColumn("created_at", current_timestamp())
 
-# Show sample
+print("Before show")
 df.show(5)
 
-# Save as Parquet (important)
+print("Before write")
 df.write.mode("overwrite").parquet("D:/PREM/aws-spark-data-pipeline-main/aws-spark-data-pipeline-main/data/raw/")
-
-print(" Data generation completed")
+print("After write")
